@@ -1,1 +1,6 @@
-/nix/store/hc72i804d1czac1jslj0iwmmk0k7xbfa-home-manager-files/.config/nvim/lua/plugins/copilot.lua
+-- Example in plugins/init.lua or plugins/copilot.lua
+return {
+  {
+    "github/copilot.vim",
+  },
+}

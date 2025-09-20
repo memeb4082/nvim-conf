@@ -1,1 +1,13 @@
-/nix/store/hc72i804d1czac1jslj0iwmmk0k7xbfa-home-manager-files/.config/nvim/lua/plugins/tokyonight.lua
+return {
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      vim.opt.background = "dark"
+      vim.cmd.colorscheme "oxocarbon"
+    end,
+  }
+}
+

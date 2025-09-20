@@ -1,1 +1,13 @@
-/nix/store/hc72i804d1czac1jslj0iwmmk0k7xbfa-home-manager-files/.config/nvim/lua/plugins/treesitter.lua
+local parser_install_dir = vim.fn.stdpath("cache") .. "/treesitters"
+vim.fn.mkdir(parser_install_dir, "p")
+vim.opt.runtimepath:append(parser_install_dir)
+
+return {
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      parser_install_dir = parser_install_dir,
+    },
+  },
+}
+
