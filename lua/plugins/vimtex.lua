@@ -9,9 +9,12 @@ return {
       vim.g.vimtex_syntax_enabled = 1
       vim.g.vimtex_fold_enabled = 1
       vim.g.vimtex_complete_enabled = 1
+      vim.g.vimtex_compiler_latexmk_engines = {
+        _ = "-xelatex",
+      }
       vim.g.vimtex_compiler_latexmk = {
         options = {
-          "-pdf",
+          "-xelatex",
           "-shell-escape",
           "-interaction=nonstopmode",
           "-synctex=1",

@@ -21,7 +21,6 @@ vim.g.vimtex_compiler_latexmk = {
     "-shell-escape",
   }
 }
-
 -- bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -144,5 +143,7 @@ require("lazy").setup({
   spec = {
     -- import plugins from lua/plugins
     { import = "plugins" },
+    { "nvim-lua/plenary.nvim"},
   },
 })
+
