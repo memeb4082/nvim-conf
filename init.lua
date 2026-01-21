@@ -1,4 +1,5 @@
 vim.api.nvim_set_option("clipboard", "unnamedplus")
+
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>y", "\"+y")
@@ -81,6 +82,7 @@ vim.lsp.config("ltex_plus", {
     },
   },
 })
+vim.lsp.enable("neocmake")
 vim.lsp.config("clangd", {
   cmd = { "clangd" },
   filetypes = { "c", "cpp", "objc", "objcpp" },
@@ -144,6 +146,7 @@ require("lazy").setup({
     -- import plugins from lua/plugins
     { import = "plugins" },
     { "nvim-lua/plenary.nvim"},
+    { "jakemason/ouroboros.nvim"},
   },
 })
 
